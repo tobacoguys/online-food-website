@@ -84,9 +84,9 @@ def vendor_detail_view(request, vid):
     return render(request, "core/vendor-detail.html", context)
 
 
-def product_detail_view(request, pid):
+def product_detail_view(request, pid, g2h12e2he5):
     product = Product.objects.get(pid=pid)
-    # product = get_object_or_404(Product, pid=pid)
+    product = get_object_or_404(Product, pid=pid)
     products = Product.objects.filter(category=product.category).exclude(pid=pid)
 
     # Getting all reviews related to a product

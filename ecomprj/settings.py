@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'crispy_bootstrap5',
     'django_ckeditor_5',
     'paypal.standard.ipn',
+    'ckeditor_uploader',
 
     # Custom Apps
     'core',
@@ -99,7 +100,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',  
         'NAME': 'online',  
         'USER':'root',  
-        'PASSWORD':'123456',  
+        'PASSWORD':'root',  
         'HOST':'localhost',  
         'PORT':'3306'  
     }  

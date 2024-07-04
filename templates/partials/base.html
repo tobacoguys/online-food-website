@@ -41,10 +41,10 @@
                     <div class="col-xl-3 col-lg-4">
                         <div class="header-info">
                             <ul>
-                                <li><a href="{% url 'core:about_us' %}">About Us</a></li>
-                                <li><a href="{% url 'core:dashboard' %}">My Account</a></li>
-                                <li><a href="{% url 'core:wishlist' %}">Wishlist</a></li>
-                                <li><a href="{% url 'core:dashboard' %}">Order Tracking</a></li>
+                                <li><a href="{% url 'core:about_us' %}">Về chúng tôi</a></li>
+                                <li><a href="{% url 'core:dashboard' %}">Tài khoản</a></li>
+                                <li><a href="{% url 'core:wishlist' %}">Danh sách yêu thích</a></li>
+                                <li><a href="{% url 'core:dashboard' %}">Theo dõi đặt hàng</a></li>
                             </ul>
                         </div>
                     </div>
@@ -52,8 +52,8 @@
                         <div class="text-center">
                             <div id="news-flash" class="d-inline-block">
                                 <ul>
-                                    <li>100% Secure delivery without contacting the courier</li>
-                                    <li>Supper Value Deals - Save more with coupons</li>
+                                    <li>Alo là có liền, chỉ có thể là Chong Ten Jong</li>
+                                    <li></li>
                                     <li>Trendy 25silver jewelry, save up 35% off today</li>
                                 </ul>
                             </div>
@@ -62,9 +62,9 @@
                     <div class="col-xl-3 col-lg-4">
                         <div class="header-info header-info-right">
                             <ul>
-                                <li>Need help? Call Us: <strong class="text-brand"> + 1800 900</strong></li>
+                                <li>Hãy gọi nếu cần hỗ trợ <strong class="text-brand"> + 1900 100 có</strong></li>
                                 <li>
-                                    <a class="language-dropdown-active" href="#">English <i class="fi-rs-angle-small-down"></i></a>
+                                    <a class="language-dropdown-active" href="#">Việt Nam<i class="fi-rs-angle-small-down"></i></a>
                                     <ul class="language-dropdown">
                                         <li>
                                             <a href="#"><img src="{% static 'assets/imgs/theme/flag-fr.png' %}" alt="" />Français</a>
@@ -107,7 +107,7 @@
                         <div class="search-style-2">
                             <form action="{% url 'core:search' %}" method="GET">
                                 <select class="select-active">
-                                    <option>All Categories</option>
+                                    <option>Tất cả </option>
                                     <option>Milks and Dairies</option>
                                     <option>Wines & Alcohol</option>
                                     <option>Clothing & Beauty</option>
@@ -135,14 +135,14 @@
                                         <span class="pro-count blue">0</span>
                                         {% endif %}
                                     </a>
-                                    <a href="{% url 'core:wishlist' %}"><span class="lable">Wishlist</span></a>
+                                    <a href="{% url 'core:wishlist' %}"><span class="lable">Danh sách yêu thích</span></a>
                                 </div>
                                 <div class="header-action-icon-2">
                                     <a class="mini-cart-icon" href="{% url 'core:cart' %}">
                                         <img alt="E-commerce" src="{% static 'assets/imgs/theme/icons/icon-cart.svg' %}" />
                                         <span class="pro-count blue cart-items-count">{{ request.session.cart_data_obj|length }}</span>
                                     </a>
-                                    <a href="{% url 'core:cart' %}"><span class="lable">Cart</span></a>
+                                    <a href="{% url 'core:cart' %}"><span class="lable">Giỏ hàng</span></a>
                                     <div class="cart-dropdown-wrap cart-dropdown-hm2">
 
                                         <div class="shopping-cart-footer">
@@ -157,19 +157,19 @@
                                     <a href="{% url 'core:dashboard' %}">
                                         <img class="svgInject" alt="E-commerce" src="{% static 'assets/imgs/theme/icons/icon-user.svg' %}" />
                                     </a>
-                                    <a href="{% url 'core:dashboard' %}"><span class="lable ml-0">Account</span></a>
+                                    <a href="{% url 'core:dashboard' %}"><span class="lable ml-0">Tài khoản</span></a>
                                     <div class="cart-dropdown-wrap cart-dropdown-hm2 account-dropdown">
                                         <ul>
-                                            <li><a href="{% url 'core:dashboard' %}"><i class="fi fi-rs-user mr-10"></i>My Account</a></li>
-                                            <li><a href="{% url 'useradmin:dashboard' %}"><i class="fi fi-rs-user mr-10"></i>Admin Dashboard</a></li>
+                                            <li><a href="{% url 'core:dashboard' %}"><i class="fi fi-rs-user mr-10"></i>Tài khoản của tôi</a></li>
+                                            <li><a href="{% url 'useradmin:dashboard' %}"><i class="fi fi-rs-user mr-10"></i>Quản lý sản phẩm</a></li>
                                             <!-- <li><a href="#"><i class="fi fi-rs-location-alt mr-10"></i>Order Tracking</a></li> -->
-                                            <li><a href="{% url 'core:wishlist' %}"><i class="fi fi-rs-heart mr-10"></i>My Wishlist</a></li>
-                                            <li><a href="{% url 'core:dashboard' %}"><i class="fi fi-rs-settings-sliders mr-10"></i>Setting</a></li>
+                                            <li><a href="{% url 'core:wishlist' %}"><i class="fi fi-rs-heart mr-10"></i>Danh sách yêu thích</a></li>
+                                            <li><a href="{% url 'core:dashboard' %}"><i class="fi fi-rs-settings-sliders mr-10"></i>Cài đặt</a></li>
 
                                             {% if request.user.is_authenticated %}
-                                            <li><a href="{% url 'userauths:sign-out' %}"><i class="fi fi-rs-sign-out mr-10"></i>Sign out</a></li>
+                                            <li><a href="{% url 'userauths:sign-out' %}"><i class="fi fi-rs-sign-out mr-10"></i>Đăng xuất</a></li>
                                             {% else %}
-                                            <li><a href="{% url 'userauths:sign-in' %}"><i class="fi fi-rs-sign-in mr-10"></i>Sign In</a></li>
+                                            <li><a href="{% url 'userauths:sign-in' %}"><i class="fi fi-rs-sign-in mr-10"></i>Đăng nhập</a></li>
                                             {% endif %}
                                         </ul>
                                     </div>
@@ -189,7 +189,7 @@
                     <div class="header-nav d-none d-lg-flex">
                         <div class="main-categori-wrap d-none d-lg-block">
                             <a class="categories-button-active" href="#">
-                                <span class="fi-rs-apps"></span> <span class="et">Browse</span> All Categories
+                                <span class="fi-rs-apps"></span> <span class="et"></span> Tất cả sản phẩm
                                 <i class="fi-rs-angle-down"></i>
                             </a>
                             <div class="categories-dropdown-wrap categories-dropdown-active-large font-heading">
@@ -206,92 +206,86 @@
 
                                 </div>
 
-                                <div class="more_categories"><span class="icon"></span> <span class="heading-sm-1">Show more...</span></div>
+                                <div class="more_categories"><span class="icon"></span> <span class="heading-sm-1">Thêm...</span></div>
                             </div>
                         </div>
                         <div class="main-menu main-menu-padding-1 main-menu-lh-2 d-none d-lg-block font-heading">
                             <nav>
                                 <ul>
-                                    <li class="hot-deals"><img src="{% static 'assets/imgs/theme/icons/icon-hot.svg' %}" alt="hot deals" /><a href="{% url 'core:product-list' %}">Deals</a></li>
+                                    <li class="hot-deals"><img src="{% static 'assets/imgs/theme/icons/icon-hot.svg' %}" alt="hot deals" /><a href="{% url 'core:product-list' %}">Ưu đãi</a></li>
                                     <li>
-                                        <a class="active" href="{% url 'core:index' %}">Home</a>
+                                        <a class="active" href="{% url 'core:index' %}">Trang chủ</a>
 
                                     </li>
 
                                     <li>
-                                        <a href="#">Category <i class="fi-rs-angle-down"></i></a>
+                                        <a href="#">Thể loại <i class="fi-rs-angle-down"></i></a>
                                         <ul class="sub-menu">
                                             {% for c in categories %}
                                             <li><a href="{% url 'core:category-product-list' c.cid %}">{{c.title}}</a></li>
                                             {% endfor %}
                                             <hr>
-                                            <li><a href="{% url 'core:category-list' %}">All Categories</a></li>
+                                            <li><a href="{% url 'core:category-list' %}">Tất cả thể loại</a></li>
 
                                         </ul>
                                     </li>
 
                                     <li>
-                                        <a href="{% url 'core:product-list'  %}">Shop</a>
+                                        <a href="{% url 'core:product-list'  %}">Cửa hàng</a>
                                     </li>
 
                                     <li>
-                                        <a href="{% url 'core:vendor-list' %}">Vendors </a>
+                                        <a href="{% url 'core:vendor-list' %}">Nhà sản xuất </a>
 
                                     </li>
                                     <li class="position-static">
-                                        <a href="#">Mega menu <i class="fi-rs-angle-down"></i></a>
+                                        <a href="#">Menu <i class="fi-rs-angle-down"></i></a>
                                         <ul class="mega-menu">
                                             <li class="sub-mega-menu sub-mega-menu-width-22">
-                                                <a class="menu-title" href="#">Fruit & Vegetables</a>
+                                                <a class="menu-title" href="#">Hoa quả và rau củ</a>
                                                 <ul>
-                                                    <li><a href="#">Meat & Poultry</a></li>
-                                                    <li><a href="#">Fresh Vegetables</a></li>
-                                                    <li><a href="#">Herbs & Seasonings</a></li>
-                                                    <li><a href="#">Cuts & Sprouts</a></li>
-                                                    <li><a href="#">Exotic Fruits & Veggies</a></li>
-                                                    <li><a href="#">Packaged Produce</a></li>
+                                                    <li><a href="#">Hoa quả theo mùa</a></li>
+                                                    <li><a href="#">Rau củ</a></li>
                                                 </ul>
                                             </li>
                                             <li class="sub-mega-menu sub-mega-menu-width-22">
-                                                <a class="menu-title" href="#">Breakfast & Dairy</a>
+                                                <a class="menu-title" href="#">Thịt gia súc,gia cầm</a>
                                                 <ul>
-                                                    <li><a href="#">Milk & Flavoured Milk</a></li>
-                                                    <li><a href="#">Butter and Margarine</a></li>
-                                                    <li><a href="#">Eggs Substitutes</a></li>
-                                                    <li><a href="#">Marmalades</a></li>
-                                                    <li><a href="#">Sour Cream</a></li>
-                                                    <li><a href="#">Cheese</a></li>
+                                                    <li><a href="#">Thịt bò</a></li>
+                                                    <li><a href="#">Thịt gà</a></li>
+                                                    <li><a href="#">Thịt lợn</a></li>
+                                                    <li><a href="#">Thịt vịt</a></li>
                                                 </ul>
                                             </li>
                                             <li class="sub-mega-menu sub-mega-menu-width-22">
-                                                <a class="menu-title" href="#">Meat & Seafood</a>
+                                                <a class="menu-title" href="#">Hải Sản</a>
                                                 <ul>
-                                                    <li><a href="#">Breakfast Sausage</a></li>
-                                                    <li><a href="#">Dinner Sausage</a></li>
-                                                    <li><a href="#">Chicken</a></li>
-                                                    <li><a href="#">Sliced Deli Meat</a></li>
-                                                    <li><a href="#">Wild Caught Fillets</a></li>
-                                                    <li><a href="#">Crab and Shellfish</a></li>
+                                                    <li><a href="#">Mực</a></li>
+                                                    <li><a href="#">Cá ngừ</a></li>
+                                                    <li><a href="#">Cá chích</a></li>
+                                                    <li><a href="#">Tôm sú</a></li>
+                                                    <li><a href="#">Cua hoàng đế</a></li>
+                                                    <li><a href="#">Ghẹ</a></li>
                                                 </ul>
                                             </li>
                                             <li class="sub-mega-menu sub-mega-menu-width-34">
                                                 <div class="menu-banner-wrap">
                                                     <a href="#"><img src="{% static 'assets/imgs/banner/banner-menu.png' %}" alt="E-commerce" /></a>
                                                     <div class="menu-banner-content">
-                                                        <h4>Hot deals</h4>
+                                                        <h4>Ưu đãi </h4>
                                                         <h3>
-                                                            Don't miss<br /> Trending
+                                                            Đừng bỏ lỡ
                                                         </h3>
                                                         <div class="menu-banner-price">
-                                                            <span class="new-price text-success">Save to 50%</span>
+                                                            <span class="new-price text-success">Tiết kiệm <br/>lên đến 50%</span>
                                                         </div>
                                                         <div class="menu-banner-btn">
-                                                            <a href="#">Shop now</a>
+                                                            <a href="#">Mua ngay</a>
                                                         </div>
                                                     </div>
                                                     <div class="menu-banner-discount">
                                                         <h3>
-                                                            <span>25%</span> off
+                                                            <span> Giảm 25%</span>
                                                         </h3>
                                                     </div>
                                                 </div>
@@ -305,16 +299,16 @@
                                     <li>
                                         <a href="#">Pages <i class="fi-rs-angle-down"></i></a>
                                         <ul class="sub-menu">
-                                            <li><a href="{% url 'core:about_us' %}">About Us</a></li>
-                                            <li><a href="{% url 'core:contact' %}">Contact</a></li>
-                                            <li><a href="{% url 'core:dashboard' %}">My Dashboard</a></li>
-                                            <li><a href="{% url 'core:purchase_guide' %}">Purchase Guide</a></li>
-                                            <li><a href="{% url 'core:privacy_policy' %}">Privacy Policy</a></li>
-                                            <li><a href="{% url 'core:terms_of_service' %}">Terms of Service</a></li>
+                                            <li><a href="{% url 'core:about_us' %}">Về chúng tôi</a></li>
+                                            <li><a href="{% url 'core:contact' %}">Liên hệ</a></li>
+                                            <li><a href="{% url 'core:dashboard' %}">Quản lý sản phẩm</a></li>
+                                            <li><a href="{% url 'core:purchase_guide' %}">Hướng dẫn thanh toán</a></li>
+                                            <li><a href="{% url 'core:privacy_policy' %}">Chính sách bảo mật</a></li>
+                                            <li><a href="{% url 'core:terms_of_service' %}">Điều khoản dịch vụ</a></li>
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="{% url 'core:contact' %}">Contact</a>
+                                        <a href="{% url 'core:contact' %}">Liên hệ</a>
                                     </li>
                                 </ul>
                             </nav>
@@ -322,7 +316,7 @@
                     </div>
                     <div class="hotline d-none d-lg-flex">
                         <img src="{% static 'assets/imgs/theme/icons/icon-headphone.svg' %}" alt="hotline" />
-                        <p>1900 - 888<span>24/7 Support Center</span></p>
+                        <p>1900 - 100 có<span>Hỗ trợ 24/1</span></p>
                     </div>
                     <div class="header-action-icon-2 d-block d-lg-none">
                         <div class="burger-icon burger-icon-white">
@@ -717,3 +711,5 @@
 </body>
 
 </html>
+ {% comment %} git 234 {% endcomment %}
+
