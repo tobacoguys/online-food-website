@@ -6,11 +6,11 @@
 <section class="content-main">
     <div class="content-header">
         <div>
-            <h2 class="content-title card-title">Products List</h2>
-            <p>Manage all your products from here</p>
+            <h2 class="content-title card-title">Danh sách sản phẩm</h2>
+            <p>Quản lý sản phẩm của bạn ở đây</p>
         </div>
         <div>
-            <a href="{% url 'useradmin:dashboard-add-products' %}" class="btn btn-primary btn-sm rounded">Create Product</a>
+            <a href="{% url 'useradmin:dashboard-add-products' %}" class="btn btn-primary btn-sm rounded">Tạo sản phẩm</a>
         </div>
     </div>
     <div class="card mb-4">
@@ -19,10 +19,10 @@
                 
                 <div class="col-md-2 col-6">
                     <select class="form-select">
-                        <option selected>Status</option>
-                        <option>Active</option>
-                        <option>Disabled</option>
-                        <option>Show all</option>
+                        <option selected>Tình trạng</option>
+                        <option>Còn hàng</option>
+                        <option>Hết hàng</option>
+                        <option>Xem tất cả</option>
                     </select>
                 </div>
             </div>
@@ -45,8 +45,8 @@
                     <div class="col-lg-2 col-sm-2 col-4 col-status"><span class="badge  alert-dark">{{p.product_status|title}}</span></div>
                     <div class="col-lg-1 col-sm-2 col-4 col-date"><span>{{p.date}}</span></div>
                     <div class="col-lg-2 col-sm-2 col-4 col-action text-end">
-                        <a href="{% url 'useradmin:dashboard-edit-products'  p.pid %}" class="btn btn-sm font-sm rounded btn-brand"> <i class="material-icons md-edit"></i> Edit </a>
-                        <a href="{% url 'useradmin:dashboard-delete-products' p.pid  %}" class="btn btn-sm font-sm btn-light rounded"> <i class="material-icons md-delete_forever"></i> Delete </a>
+                        <a href="{% url 'useradmin:dashboard-edit-products'  p.pid %}" class="btn btn-sm font-sm rounded btn-brand"> <i class="material-icons md-edit"></i> Chỉnh sửa </a>
+                        <a href="{% url 'useradmin:dashboard-delete-products' p.pid  %}" class="btn btn-sm font-sm btn-light rounded"> <i class="material-icons md-delete_forever"></i> Xóa </a>
                     </div>
                 </div>
             </article>

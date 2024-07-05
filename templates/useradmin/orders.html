@@ -6,8 +6,8 @@
 <section class="content-main">
     <div class="content-header">
         <div>
-            <h2 class="content-title card-title">Order List</h2>
-            <p>Manage all your orders from here</p>
+            <h2 class="content-title card-title">Danh sách đơn hàng</h2>
+            <p>Quản lý đơn hàng tại đây</p>
         </div>
         <div>
             <input type="text" placeholder="Search order ID" class="form-control bg-white" />
@@ -21,17 +21,10 @@
                 </div>
                 <div class="col-lg-2 col-6 col-md-3">
                     <select class="form-select">
-                        <option>Status</option>
-                        <option>Active</option>
-                        <option>Disabled</option>
-                        <option>Show all</option>
-                    </select>
-                </div>
-                <div class="col-lg-2 col-6 col-md-3">
-                    <select class="form-select">
-                        <option>Show 20</option>
-                        <option>Show 30</option>
-                        <option>Show 40</option>
+                        <option>Tình trạng</option>
+                        <option>Còn hàng</option>
+                        <option>Hết hàng</option>
+                        <option>Xem tất cả</option>
                     </select>
                 </div>
             </div>
@@ -43,12 +36,12 @@
                     <thead>
                             <tr>
                             <th>#ID</th>
-                            <th scope="col">Name</th>
+                            <th scope="col">Tên</th>
                             <th scope="col">Email</th>
-                            <th scope="col">Total</th>
-                            <th scope="col">Order Status</th>
-                            <th scope="col">Payment Status</th>
-                            <th scope="col">Action</th>
+                            <th scope="col">Tổng</th>
+                            <th scope="col">Tình trạng đơn hàng</th>
+                            <th scope="col">Tình trạng thanh toán</th>
+                            <th scope="col">Thêm</th>
                         </tr>
                             
                     </thead>
@@ -59,11 +52,11 @@
                                 <td><b>{{c.full_name|title}}</b></td>
                                 <td>{{c.email}}</td>
                                 <td>${{c.price}}</td>
-                                <td><span class="badge alert-secondary">Pending</span></td>
+                                <td><span class="badge alert-secondary">Chưa quyết định </span></td>
                                 {% if c.paid_status == True %}
-                                    <td><span class="badge alert-success"></span>Paid</td>
+                                    <td><span class="badge alert-success"></span>Đã thanh toán</td>
                                 {% else %}
-                                    <td><span class="badge alert-danger">Not Paid</span></td>
+                                    <td><span class="badge alert-danger">Chưa thanh toán</span></td>
                                 {% endif %}
                                 <td>
                                     <a href="{% url 'useradmin:order_detail' c.id %}" class="btn btn-md rounded font-sm">View Detail</a>

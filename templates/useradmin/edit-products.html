@@ -38,10 +38,9 @@
                 <div class="row">
                     <div class="col-9">
                         <div class="content-header">
-                            <h2 class="content-title">Add New Product</h2>
+                            <h2 class="content-title">Chỉnh sửa sản phẩm</h2>
                             <div>
-                                <button class="btn btn-light rounded font-sm mr-5 text-body hover-up">Save to draft</button>
-                                <button class="btn btn-md rounded font-sm hover-up">Publich</button>
+                                <button class="btn btn-light rounded font-sm mr-5 text-body hover-up">Lưu bản nháp</button>
                             </div>
                         </div>
                     </div>
@@ -62,12 +61,12 @@
                                 {% endif %}
                                     {% csrf_token %}
                                     <div class="mb-4">
-                                        <label for="product_name" class="form-label">Product title</label>
+                                        <label for="product_name" class="form-label">Tên sản phẩm</label>
                                         {{form.title}}
                                         <!-- <input type="text" placeholder="Type here" class="form-control" id="product_name" /> -->
                                     </div>
                                     <div class="mb-4">
-                                        <label class="form-label">Full description</label>
+                                        <label class="form-label">Mô tả</label>
                                         {{form.description}}
 
                                         <!-- <textarea placeholder="Type here" class="form-control" rows="4"></textarea> -->
@@ -75,7 +74,7 @@
                                     <div class="row">
                                         <div class="col-lg-4">
                                             <div class="mb-4">
-                                                <label class="form-label">Selling price</label>
+                                                <label class="form-label">Giá bán</label>
                                                 <div class="row gx-2">
                                         {{form.price}}
 
@@ -85,14 +84,14 @@
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="mb-4">
-                                                <label class="form-label">Old price</label>
+                                                <label class="form-label">Giá cũ</label>
                                         {{form.old_price}}
 
                                                 <!-- <input placeholder="$" type="text" class="form-control" /> -->
                                             </div>
                                         </div>
                                         <div class="col-lg-4">
-                                            <label class="form-label">Currency</label>
+                                            <label class="form-label">Mệnh giá</label>
                                             <select class="form-select">
                                                 <option>USD</option>
                                                
@@ -100,43 +99,28 @@
                                         </div>
                                     </div>
                                     <div class="mb-4">
-                                        <label class="form-label">Type</label>
+                                        <label class="form-label">Loại</label>
                                         {{form.type}}
                                         <!-- <input type="text" placeholder="%" class="form-control" id="product_name" /> -->
                                     </div>
                                     <div class="mb-4">
-                                        <label class="form-label">Stock</label>
+                                        <label class="form-label">Số hàng còn lại</label>
                                         {{form.stock_count}}
                                         <!-- <input type="text" placeholder="%" class="form-control" id="product_name" /> -->
                                     </div>
 
                                     <div class="mb-4">
-                                        <label class="form-label">Life of Product</label>
+                                        <label class="form-label">Hạn sử dụng</label>
                                         {{form.life}}
                                         <!-- <input type="text" placeholder="%" class="form-control" id="product_name" /> -->
                                     </div>
 
                                     <div class="mb-4">
-                                        <label class="form-label">Manufactured Date</label>
+                                        <label class="form-label">Ngày ra mắt</label>
                                         {{form.mfd}}
                                         <!-- <input type="text" placeholder="%" class="form-control" id="product_name" /> -->
                                     </div>
-
-                                    <div class="mb-4">
-                                        <label class="form-label">Tags</label>
-                                        {{form.tags}}
-                                        <small class="text-muted">Seperate tag using comma</small>
-                                        <!-- <input type="text" placeholder="%" class="form-control" id="product_name" /> -->
-                                    </div>
-
-                                    <div class="mb-4">
-                                        <label class="form-label">Digital Product</label>
-                                        <br>
-                                        {{form.digital}}
-                                        <small class="text-muted">Check if only this is a digital product</small>
-                                        <!-- <input type="text" placeholder="%" class="form-control" id="product_name" /> -->
-                                    </div>
-                                    
+            
                                     <label class="form-check mb-4">
                                         <input class="form-check-input" type="checkbox" value="" />
                                         <span class="form-check-label"> Make a template </span>
@@ -150,7 +134,7 @@
                     <div class="col-lg-3">
                         <div class="card mb-4">
                             <div class="card-header">
-                                <h4>Media</h4>
+                                <h4>Hình ảnh</h4>
                             </div>
                             <div class="card-body">
                                 <div class="input-upload">
@@ -165,12 +149,12 @@
                         <!-- card end// -->
                         <div class="card mb-4">
                             <div class="card-header">
-                                <h4>Others</h4>
+                                <h4>Khác</h4>
                             </div>
                             <div class="card-body">
                                 <div class="row gx-2">
                                     <div class="col-sm-6 mb-3">
-                                        <label class="form-label">Category</label>
+                                        <label class="form-label">Thể loại</label>
                                         {{form.category}}
                                     </div>
                                     
@@ -181,7 +165,7 @@
                             
                         </div>
                         <!-- card end// -->
-                        <button class="btn mt-3 btn-md rounded font-sm hover-up" type="submit">Update Product</button>
+                        <button class="btn mt-3 btn-md rounded font-sm hover-up" type="submit">Cập nhật sản phẩm</button>
                     </div>
                 </div>
                 </form>
